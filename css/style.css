@@ -28,7 +28,14 @@ header {
 
 .logo-img {  /*台北老人基金會圖片大小*/
   width: 350px;
-  height: auto;}
+  height: auto;
+  margin-left: 0;}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 讓內容靠左 */
+}
 
 p.mb-5 {
   text-align: center;  /* 讓文字置中 */
