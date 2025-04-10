@@ -48,6 +48,38 @@ p.mb-5 {
   text-align: center; /* 讓內容文字置中 */
 }
 
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.section-title-text {
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E99922; /* 文字顏色 */
+  position: relative;
+}
+
+.contact-title {
+  margin-top: -30px;  /* 往上移動 20px */
+  color: #E99922;
+  font-weight: bold;  /* 設為粗體 */
+}
+
+
+.section-title-text::before,
+.section-title-text::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: #E99922; /* 線條顏色 */
+  margin: 0 1rem;
+}
+
+
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -1741,7 +1773,7 @@ h1, h2, h3, h4, h5,
   position: absolute;
   bottom: -10px;
   right: -10px;
-  background: #007bff;
+  background: #d9760c;
   padding: 20px; }
   @media (max-width: 991.98px) {
     .experience {
