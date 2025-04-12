@@ -48,6 +48,66 @@ p.mb-5 {
   text-align: center; /* 讓內容文字置中 */
 }
 
+/*長者服務*/
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.7; /* 一開始圖片帶有半透明的效果 */
+  transition: opacity 0.3s ease; /* 背景圖片的過渡效果 */
+}
+
+/* 文字區塊，預設顯示在圖片上 */
+.portfolio-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+/* 文字樣式 */
+.portfolio-caption-heading {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.portfolio-caption-subheading {
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+/* 一開始的背景覆蓋層：黑灰色半透明 */
+.portfolio-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 黑色半透明 */
+  z-index: 1;
+  transition: background-color 0.3s ease; /* 背景顏色過渡效果 */
+}
+
+/* 滑鼠懸停時的背景效果：半透明黃色 */
+.portfolio-item:hover .portfolio-hover {
+  background-color: rgba(238, 189, 55, 0.64); /* 半透明黃色 */
+}
+
+.portfolio-item:hover img {
+  opacity: 1; /* 滑鼠懸停時圖片變回正常不透明 */
+}
+
+
+/*長者服務*/
+
 .section-divider {
   display: flex;
   align-items: center;
