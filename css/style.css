@@ -48,7 +48,7 @@ p.mb-5 {
   text-align: center; /* 讓內容文字置中 */
 }
 
-/*長者服務*/
+/*  長者服務  */
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -106,7 +106,20 @@ p.mb-5 {
 }
 
 
-/*長者服務*/
+/*  長者服務  */
+
+
+.modal-xl {  /*modal視窗大小*/
+  max-width: 65% !important;
+}
+
+.close-modal {  /*modal視窗叉叉位置*/
+  position: absolute;
+  top: 15px;      /* 微微往下，避免貼太上面 */
+  right: 15px;    /* 微微往左，避免太貼邊 */
+  z-index: 1055;  /* 確保會在最上層 */
+}
+
 
 .section-divider {
   display: flex;
