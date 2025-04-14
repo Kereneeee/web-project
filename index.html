@@ -69,7 +69,7 @@
         </div>
       </div> 
     </div>
-
+    <!--導覽列-->
     <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
@@ -86,7 +86,17 @@
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">首頁</a></li>
-                <li><a href="#about-section" class="nav-link">關於我們</a></li>
+                <!-- 下拉式「關於我們」選單 -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#about-section" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    關於我們
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                    <li><a class="dropdown-item" href="#intro-section">基金會簡介</a></li>
+                    <li><a class="dropdown-item" href="#groups-section">基金會分組</a></li>
+                    <li><a class="dropdown-item" href="#events-section">基金會記事</a></li>
+                  </ul>
+                </li>
                 <li><a href="#services-section" class="nav-link">長者服務</a></li>
                 <li><a href="#contact-section" class="nav-link">聯絡我們</a></li>
                 <li><a href="#Donate-section" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2"style="color: white !important;">捐款</a></li>
@@ -219,7 +229,7 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="images/person_4.jpg" alt="..." />
+                            <img class="img-fluid" src="images/長者救援.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">長者救援</div>
@@ -233,7 +243,7 @@
                           <div class="portfolio-hover">
                               <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                           </div>
-                          <img class="img-fluid" src="images/person_4.jpg" alt="..." />
+                          <img class="img-fluid" src="images/長者服務.jpg" alt="..." />
                       </a>
                       <div class="portfolio-caption">
                           <div class="portfolio-caption-heading">長者服務</div>
@@ -247,7 +257,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="images/person_4.jpg" alt="..." />
+                        <img class="img-fluid" src="images/社會志工.jpg" alt="..." />
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">社會志工</div>
@@ -408,7 +418,8 @@
             </div>
           </div>
         </div>
-        
+
+    
 
     <section class="site-section testimonial-wrap" id="testimonials-section">
       <div class="container">

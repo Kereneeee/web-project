@@ -33,6 +33,23 @@
       .context-about {
         text-align: left;
       }
+      .section-title{
+        color: #E99922;
+      }
+      #testimonials-section {
+  width: 100%;
+  height: 500px;
+  background-image: url("images/基金會簡介.jpg"); 
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+}
+
+#testimonials-section .section-title {
+  color: #3a2404; /* 黑字 */
+}
     </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -69,137 +86,105 @@
         </div>
       </div> 
     </div>
-
+    <!--導覽列-->
     <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
-
       <div class="container">
         <div class="row align-items-center">
-          
+    
           <div class="col-3 col-xl-2 logo-container">
             <!--<h1 class="mb-0 site-logo">-->
-              <a href="index.html">
-                  <img src="images/title.png" alt="台北老人基金會" class="logo-img">
-              </a>
-          <!--</h1> -->         </div>
+            <a href="index.html">
+              <img src="images/title.png" alt="台北老人基金會" class="logo-img">
+            </a>
+            <!--</h1>-->
+          </div>
+    
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
-
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="index.html" class="nav-link">首頁</a></li>
-                <li><a href="#about-section" class="nav-link">基金會簡介</a></li>
-                <li><a href="#services-section" class="nav-link">基金會分組</a></li>
-                <li><a href="#services-section" class="nav-link">基金會記事</a></li>
-                <li><a href="#contact-section" class="nav-link">財務報告</a></li>
-                <li><a href="index.html#Donate-section" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2"style="color: white !important;">捐款</a></li>
+                <li><a href="index.html#home-section" class="nav-link">首頁</a></li>
+    
+                <!-- 下拉式「關於我們」選單 -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    關於我們
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                    <li><a class="dropdown-item" href="#intro-section">基金會簡介</a></li>
+                    <li><a class="dropdown-item" href="#groups-section">基金會分組</a></li>
+                    <li><a class="dropdown-item" href="#events-section">基金會記事</a></li>
+                  </ul>
+                </li>
+                <li><a href="#Donate-section" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2" style="color: white !important;">捐款</a></li>
               </ul>
             </nav>
           </div>
-
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
-
+    
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;">
+            <a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+    
         </div>
       </div>
-      
     </header>
 
-  
-     
-    <div class="site-blocks-cover overlay" style="background-image: url(images/子頁面1_封面圖.jpg);" data-aos="fade">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-
-          <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
-                        
-            <div class="row mb-4">
-              <div class="col-md-8">
-                <h1>用愛守護長者，讓每一天都更美好</h1>
-                <p class="mb-5">台北老人基金會致力於關懷長者，提供基本的照護與生活支持，<br>
-                讓每位長者都能安心度過晚年。</p>
-                <!--<div>
-                  <a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a>
-                </div>-->
-              </div>
-            </div>
-
+<div style="height: 150px;"></div>
+<!--基金會簡介-->
+<section class="site-section" id="services-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12">
+          <div class="d-flex align-items-center">
+            <!-- 左線 -->
+            <div style="height: 3px; background-color: #E99922; flex-grow: 1;"></div>
+            
+            <!-- 中央標題 -->
+            <h2 class="mx-4 mb-0 fw-bold" style="color: #E99922;">基金會簡介</h2>
+            
+            <!-- 右線 -->
+            <div style="height: 3px; background-color: #E99922; flex-grow: 1;"></div>
           </div>
         </div>
       </div>
-    </div>  
-
-    <!--基金會簡介-->
-    <section class="site-section">
-  
-      <section class="site-section testimonial-wrap" id="testimonials-section">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h3 class="section-sub-title">People Says</h3>
-              <h2 class="section-title mb-3">Testimonials</h2>
-            </div>
-          </div>
+    <!--基金會簡介內容-->
+    <div class="col-md-6">
+      <div class="p-4 rounded shadow-sm" style="background-color: #f9f4e8; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <!-- 標題 -->
+        <h4 class="fw-bold mb-4 text-center" style="color: #ffffff; font-size: 1.75rem; background-color: #E99922;padding: 10px 0; border-radius: 5px;">
+          捐款方式
+        </h4>
+    
+        <!-- 信用卡、郵局定期轉帳 -->
+        <div class="mb-4">
+          <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">信用卡 / 郵局定期轉帳</h5>
+          <p class="text-muted" style="color: #605441 !important;font-size: 1rem; line-height: 1.5;">下載表格或來電索取。</p>
         </div>
-        <div class="slide-one-item home-slider owl-carousel">
-            <div>
-              <div class="testimonial">
-                
-                <blockquote class="mb-5">
-                  <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-                </blockquote>
-  
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                  <div><img src="images/person_3.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                  <p>John Smith</p>
-                </figure>
-              </div>
-            </div>
-            <div>
-              <div class="testimonial">
-  
-                <blockquote class="mb-5">
-                  <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-                </blockquote>
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                  <div><img src="images/person_2.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                  <p>Christine Aguilar</p>
-                </figure>
-                
-              </div>
-            </div>
-  
-            <div>
-              <div class="testimonial">
-  
-                <blockquote class="mb-5">
-                  <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-                </blockquote>
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                  <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                  <p>Robert Spears</p>
-                </figure>
-  
-                
-              </div>
-            </div>
-  
-            <div>
-              <div class="testimonial">
-  
-                <blockquote class="mb-5">
-                  <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-                </blockquote>
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                  <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                  <p>Bruce Rogers</p>
-                </figure>
-  
-              </div>
-            </div>
-  
-          </div>
-      </section>
 
-
+        <hr style="border-top: 2px solid #ddd; margin: 1.5rem 0;">
+    
+        <!-- 郵政劃撥 -->
+        <div class="mb-4">
+          <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">郵政劃撥</h5>
+          <p class="text-muted" style="color: #605441 !important;; font-size: 1rem; line-height: 1.5;">
+            帳號：1918-1717 <br>戶名：老人基金會
+          </p>
+        </div>
+    
+        <!-- 分隔線 -->
+        <hr style="border-top: 2px solid #ddd; margin: 1.5rem 0;">
+    
+        <!-- 網路捐款 -->
+        <div>
+          <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">線上捐款</h5>
+          <p class="text-muted" style="color: #605441 !important;font-size: 1rem; line-height: 1.5;">
+            帳號：08445-00020768 <br>戶名：老人基金會
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  
 
 <!--基金會分組-->
     <section class="site-section" id="services-section">
@@ -218,11 +203,6 @@
             </div>
           </div>
         </div>
-        
-        
-        
-        
-
         <!--長者服務圖片點擊區-->
         <section class="page-section bg-light" id="portfolio">
           <div class="container">
@@ -543,89 +523,6 @@
         
                 </div>
             </section>
-
-    <!--聯絡我們-->
-    <section class="site-section bg-light" id="contact-section" style="height:650px">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-12 text-center">
-            <h2 class="contact-title mb-3">聯絡我們</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-7 mb-1 h-100">
-
-            
-
-            <form action="#" class="p-4 bg-white h-100" style="font-size: 14px; line-height: 1.5;">
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="email">姓名</label> 
-                  <input type="email" id="email" class="form-control">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">標題</label> 
-                  <input type="subject" id="subject" class="form-control">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="message">內容</label> 
-                  <textarea name="message" id="message" cols="15" rows="2" class="form-control" placeholder="請輸入你的問題..."></textarea>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="寄送" class="btn btn-primary btn-md text-white" style="background-color: rgb(240, 170, 41);">
-                </div>
-              </div>
-
-  
-            </form>
-          </div>
-          <div class="col-md-5 h-100">
-            
-            <div class="p-4 mb-3 bg-white">
-              <p class="mb-0 font-weight-bold">地址</p>
-              <p class="mb-4">104台北市中山區敬業一路128巷41號2樓之2</p>
-
-              <p class="mb-0 font-weight-bold">電話</p>
-              <p class="mb-4" ><a href="#">(02)2533-3333</a></p>
-
-              <p class="mb-0 font-weight-bold">傳真</p>
-              <p class="mb-0" ><a href="#">(02)2533-9999</a></p>
-              <br>
-              <iframe 
-                src="https://maps.google.com/maps?q=25.082943,121.553182&hl=zh-TW&z=18&output=embed" 
-                width="100%" height="188" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-              </iframe>
-
-
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
-    
     
 
     <!--尾頁-->
