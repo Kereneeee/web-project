@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>說明與表格 - 老人基金會</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .sidebar {
+      background-color: #F4E1D2;
+    }
+    .sidebar .list-group-item {
+      background-color: transparent;
+      border: none;
+      padding: 0.75rem 1rem;
+    }
+    .sidebar .list-group-item a {
+      color: #5C4033;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .sidebar .list-group-item a:hover {
+      color: #E99922;
+    }
+    .sidebar .list-group-item.active a {
+      color: #E99922;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        margin-bottom: 1.5rem;
+      }
+      .sidebar .list-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .sidebar .list-group-item {
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-3 col-xl-2 logo-container">
+          <a href="index.html">
+            <img src="images/title.png" alt="台北老人基金會" class="logo-img">
+          </a>
+        </div>
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li><a href="#home-section" class="nav-link">首頁</a></li>
+              <li><a href="#about-section" class="nav-link">關於我們</a></li>
+              <li><a href="#services-section" class="nav-link">長者服務</a></li>
+              <li><a href="#contact-section" class="nav-link">聯絡我們</a></li>
+              <li><a href="donation.html" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2" style="color: white !important;">捐款</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;">
+          <a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- 頁面 1: 網路捐款 -->
+<section class="donation-section py-5 bg-light" id="donation-page">
+  <div class="container">
+    <div class="row">
+      <!-- 側邊欄 -->
+      <div class="col-md-3 mb-4">
+        <nav class="sidebar bg-white rounded shadow-sm p-3">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="donate.html" class="text-decoration-none">網路捐款</a>
+            </li>
+            <li class="list-group-item">
+              <a href="forms.html" class="text-decoration-none">說明與表格</a>
+            </li>
+            <li class="list-group-item">
+              <a href="mails.html" class="text-decoration-none">捐款徵信</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 表單 -->
+      <div class="col-md-9">
+        <h2 class="text-center mb-4" style="color: #5C4033;">網路捐款</h2>
+        <form class="bg-white p-4 rounded shadow-sm">
+          <div class="form-group mb-3">
+            <label class="form-label">用途選擇：</label>
+            <select class="form-control">
+              <option>支持老人照顧</option>
+              <option>支持餐食服務</option>
+              <option>支持基金會營運</option>
+            </select>
+          </div>
+
+          <div class="form-group mb-3">
+            <label class="form-label">捐款金額：</label>
+            <div class="btn-group mb-3" role="group">
+              <button type="button" class="btn btn-outline-primary quick-amount-btn" data-amount="200">200 元</button>
+              <button type="button" class="btn btn-outline-primary quick-amount-btn" data-amount="500">500 元</button>
+              <button type="button" class="btn btn-outline-primary quick-amount-btn" data-amount="1000">1,000 元</button>
+            </div>
+            <input type="number" class="form-control" id="custom-amount" placeholder="自填金額（最低 200 元）">
+          </div>
+
+          <div class="form-group mb-3">
+            <label class="form-label">付款方式：</label>
+            <select class="form-control">
+              <option>銀行轉帳</option>
+              <option>信用卡</option>
+              <option>Line Pay</option>
+            </select>
+          </div>
+
+          <hr>
+          <h5 class="mb-3" style="color: #5C4033;">捐款人資料</h5>
+
+          <div class="form-group mb-3">
+            <label class="form-label">姓名或單位名稱：</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label">聯絡電話：</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group mb-3">
+            <label class="form-label">捐款金額：</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label">捐款帳號後五碼：</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group mb-3">
+            <label class="form-label">備註：</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-block mt-3" style="font-size: 1.25rem; background-color: #A67B5B; border: none; color: #FFF;" onmouseover="this.style.backgroundColor='#E99922'" onmouseout="this.style.backgroundColor='#A67B5B'">送出</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 共用樣式 -->
+<style>
+  .sidebar {
+    background-color: #F4E1D2;
+  }
+  .sidebar .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+  }
+  .sidebar .list-group-item a {
+    color: #5C4033;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .sidebar .list-group-item a:hover {
+    color: #E99922;
+  }
+  .sidebar .list-group-item.active a {
+    color: #E99922;
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .sidebar {
+      margin-bottom: 1.5rem;
+    }
+    .sidebar .list-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .sidebar .list-group-item {
+      padding: 0.5rem;
+    }
+    .btn-group .btn {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+</style>
+
+<!-- 共用腳本 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const amountButtons = document.querySelectorAll(".quick-amount-btn");
+    const customAmountInput = document.getElementById("custom-amount");
+
+    if (amountButtons && customAmountInput) {
+      amountButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          const amount = this.getAttribute("data-amount");
+          customAmountInput.value = amount;
+        });
+      });
+    }
+  });
+</script>
+</body>
+</html>
