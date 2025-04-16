@@ -36,6 +36,28 @@
       color: #E99922;
       font-weight: 600;
     }
+     /* 下拉選單樣式 */
+     .dropdown-toggle::after {
+      display: none !important; /* 移除向下三角形 */
+    }
+    .dropdown-menu {
+      background-color: #F4E1D2 !important;
+      border: 1px solid #A67B5B !important;
+      border-radius: 5px !important;
+    }
+    .dropdown-item {
+      color: #5C4033 !important;
+      font-weight: 500;
+      transition: all 0.3s ease !important;
+      border-bottom: 1px solid #A67B5B !important; /* 項目間分隔線 */
+    }
+    .dropdown-item:last-child {
+      border-bottom: none !important; /* 最後一項無分隔線 */
+    }
+    .dropdown-item:hover {
+      background-color: #E99922 !important; /* 滑鼠移過去變黃色 */
+      color: #FFF !important;
+    }
     @media (max-width: 768px) {
       .sidebar {
         margin-bottom: 1.5rem;
@@ -67,7 +89,14 @@
               <li><a href="#about-section" class="nav-link">關於我們</a></li>
               <li><a href="#services-section" class="nav-link">長者服務</a></li>
               <li><a href="#contact-section" class="nav-link">聯絡我們</a></li>
-              <li><a href="donation.html" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2" style="color: white !important;">捐款</a></li>
+              <li class="dropdown">
+                <a href="#" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2 dropdown-toggle" style="color: white !important;" data-toggle="dropdown">捐款</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="donate.html">網路捐款</a>
+                  <a class="dropdown-item" href="forms.html">說明與表格</a>
+                  <a class="dropdown-item" href="mails.html">捐款徵信</a>
+                </div>
+              </li>            
             </ul>
           </nav>
         </div>

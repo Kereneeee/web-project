@@ -36,6 +36,28 @@
       color: #E99922;
       font-weight: 600;
     }
+     /* 下拉選單樣式 */
+     .dropdown-toggle::after {
+      display: none !important; /* 移除向下三角形 */
+    }
+    .dropdown-menu {
+      background-color: #F4E1D2 !important;
+      border: 1px solid #A67B5B !important;
+      border-radius: 5px !important;
+    }
+    .dropdown-item {
+      color: #5C4033 !important;
+      font-weight: 500;
+      transition: all 0.3s ease !important;
+      border-bottom: 1px solid #A67B5B !important; /* 項目間分隔線 */
+    }
+    .dropdown-item:last-child {
+      border-bottom: none !important; /* 最後一項無分隔線 */
+    }
+    .dropdown-item:hover {
+      background-color: #E99922 !important; /* 滑鼠移過去變黃色 */
+      color: #FFF !important;
+    }
     @media (max-width: 768px) {
       .sidebar {
         margin-bottom: 1.5rem;
@@ -67,7 +89,14 @@
               <li><a href="#about-section" class="nav-link">關於我們</a></li>
               <li><a href="#services-section" class="nav-link">長者服務</a></li>
               <li><a href="#contact-section" class="nav-link">聯絡我們</a></li>
-              <li><a href="donation.html" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2" style="color: white !important;">捐款</a></li>
+              <li class="dropdown">
+                <a href="#" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2 dropdown-toggle" style="color: white !important;" data-toggle="dropdown">捐款</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="donate.html">網路捐款</a>
+                  <a class="dropdown-item" href="forms.html">說明與表格</a>
+                  <a class="dropdown-item" href="mails.html">捐款徵信</a>
+                </div>
+              </li>            
             </ul>
           </nav>
         </div>
@@ -104,7 +133,7 @@
             <h2 class="text-center mb-4" style="color: #5C4033;">說明與表格</h2>
             <div class="bg-white p-4 rounded shadow-sm">
               <div class="mb-4">
-                <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">信用卡 / 郵局定期轉帳</h5>
+                <h5 style="color: #605441; background-color: #d7d1cc; padding: 7px; font-size: 1.25rem; font-weight: 450; border-radius: 10px; margin-bottom: 20px;">信用卡 / 郵局定期轉帳</h5>
                 <p style="color: #605441; font-size: 1rem; line-height: 1.5;">
                   可立即
                   <a href="donation_form.pdf" style="color: #E99922; text-decoration: underline; font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#FFB84D'" onmouseout="this.style.color='#E99922'">下載表格</a>
@@ -115,7 +144,7 @@
               </div>
               <hr style="border-top: 0.5px solid #beb5ae; margin: 1.5rem 0;">
               <div class="mb-4">
-                <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">郵政劃撥</h5>
+                <h5 style="color: #605441; background-color: #d7d1cc; padding: 7px; font-size: 1.25rem; font-weight: 450; border-radius: 10px; margin-bottom: 20px;">郵政劃撥</h5>
                 <p style="color: #605441; font-size: 1rem; line-height: 1.5;">
                   逕至郵局將款項劃撥至本會愛心帳戶<br>
                   劃撥帳號：1918-1717<br>
@@ -124,7 +153,7 @@
               </div>
               <hr style="border-top: 0.5px solid #beb5ae; margin: 1.5rem 0;">
               <div class="mb-4">
-                <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">劃線支票</h5>
+                <h5 style="color: #605441; background-color: #d7d1cc; padding: 7px; font-size: 1.25rem; font-weight: 450; border-radius: 10px; margin-bottom: 20px;">劃線支票</h5>
                 <p style="color: #605441; font-size: 1rem; line-height: 1.5;">
                   支票抬頭為：「財團法人台北市老人基金會」<br>
                   並請註明禁止背書轉讓
@@ -132,14 +161,14 @@
               </div>
               <hr style="border-top: 0.5px solid #beb5ae; margin: 1.5rem 0;">
               <div class="mb-4">
-                <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">現金袋</h5>
+                <h5 style="color: #605441; background-color: #d7d1cc; padding: 7px; font-size: 1.25rem; font-weight: 450; border-radius: 10px; margin-bottom: 20px;">現金袋</h5>
                 <p style="color: #605441; font-size: 1rem; line-height: 1.5;">
                   請寄至：114台北碧湖郵局1號信箱（老人基金會收）
                 </p>
               </div>
               <hr style="border-top: 0.5px solid #beb5ae; margin: 1.5rem 0;">
               <div class="mb-4">
-                <h5 style="color: #E99922; font-size: 1.25rem; font-weight: 600;">網路捐款</h5>
+                <h5 style="color: #605441; background-color: #d7d1cc; padding: 7px; font-size: 1.25rem; font-weight: 450; border-radius: 10px; margin-bottom: 20px;">網路捐款</h5>
                 <p style="color: #605441; font-size: 1rem; line-height: 1.5;">
                   板信商銀（大直分行）<br>
                   帳號：08445000020768<br>

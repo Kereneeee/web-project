@@ -35,6 +35,28 @@
     .sidebar .list-group-item.active a {
       color: #E99922;
       font-weight: 600;
+     /* 下拉選單樣式 */
+     .dropdown-toggle::after {
+      display: none !important; /* 移除向下三角形 */
+    }
+    .dropdown-menu {
+      background-color: #F4E1D2 !important;
+      border: 1px solid #A67B5B !important;
+      border-radius: 5px !important;
+    }
+    .dropdown-item {
+      color: #5C4033 !important;
+      font-weight: 500;
+      transition: all 0.3s ease !important;
+      border-bottom: 1px solid #A67B5B !important; /* 項目間分隔線 */
+    }
+    .dropdown-item:last-child {
+      border-bottom: none !important; /* 最後一項無分隔線 */
+    }
+    .dropdown-item:hover {
+      background-color: #E99922 !important; /* 滑鼠移過去變黃色 */
+      color: #FFF !important;
+    }
     }
     @media (max-width: 768px) {
       .sidebar {
@@ -48,6 +70,23 @@
       .sidebar .list-group-item {
         padding: 0.5rem;
       }
+    }
+    .quick-amount-btn {
+      background-color: #f6edc9 !important; /* 淺棕背景 */
+      border: 1px solid #A67B5B !important; /* 深棕邊框 */
+      color: #A67B5B !important; /* 深棕文字 */
+      transition: all 0.3s ease !important;
+    }
+    .quick-amount-btn:hover {
+      background-color: #E99922 !important; /* hover 橘黃背景 */
+      border-color: #E99922 !important;
+      color: #FFF !important; /* 白色文字 */
+    }
+    .quick-amount-btn:active, .quick-amount-btn:focus {
+      background-color: #E99922 !important; /* 點擊橘黃背景 */
+      border-color: #E99922 !important;
+      color: #FFF !important;
+      box-shadow: none !important; /* 移除 Bootstrap focus 陰影 */
     }
   </style>
 </head>
@@ -63,11 +102,18 @@
         <div class="col-12 col-md-10 d-none d-xl-block">
           <nav class="site-navigation position-relative text-right" role="navigation">
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-              <li><a href="#home-section" class="nav-link">首頁</a></li>
-              <li><a href="#about-section" class="nav-link">關於我們</a></li>
-              <li><a href="#services-section" class="nav-link">長者服務</a></li>
-              <li><a href="#contact-section" class="nav-link">聯絡我們</a></li>
-              <li><a href="donation.html" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2" style="color: white !important;">捐款</a></li>
+              <li><a href="index.html#home-section" class="nav-link">首頁</a></li>
+              <li><a href="index.html#about-section" class="nav-link">關於我們</a></li>
+              <li><a href="index.html#services-section" class="nav-link">長者服務</a></li>
+              <li><a href="index.html#contact-section" class="nav-link">聯絡我們</a></li>
+              <li class="dropdown">
+                <a href="#" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2 dropdown-toggle" style="color: white !important;" data-toggle="dropdown">捐款</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="donate.html">網路捐款</a>
+                  <a class="dropdown-item" href="forms.html">說明與表格</a>
+                  <a class="dropdown-item" href="mails.html">捐款徵信</a>
+                </div>
+              </li>            
             </ul>
           </nav>
         </div>
@@ -106,7 +152,7 @@
           <div class="form-group mb-3">
             <label class="form-label">用途選擇：</label>
             <select class="form-control">
-              <option>支持老人照顧</option>
+              <option>支持長者照顧</option>
               <option>支持餐食服務</option>
               <option>支持基金會營運</option>
             </select>
@@ -115,9 +161,9 @@
           <div class="form-group mb-3">
             <label class="form-label">捐款金額：</label>
             <div class="btn-group mb-3" role="group">
-              <button type="button" class="btn btn-outline-primary quick-amount-btn" data-amount="200">200 元</button>
-              <button type="button" class="btn btn-outline-primary quick-amount-btn" data-amount="500">500 元</button>
-              <button type="button" class="btn btn-outline-primary quick-amount-btn" data-amount="1000">1,000 元</button>
+                <button type="button" class="btn quick-amount-btn" data-amount="200">200 元</button>
+                <button type="button" class="btn quick-amount-btn" data-amount="500">500 元</button>
+                <button type="button" class="btn quick-amount-btn" data-amount="1000">1,000 元</button>
             </div>
             <input type="number" class="form-control" id="custom-amount" placeholder="自填金額（最低 200 元）">
           </div>
@@ -132,7 +178,7 @@
           </div>
 
           <hr>
-          <h5 class="mb-3" style="color: #5C4033;">捐款人資料</h5>
+          <h5 class="mb-3" style="color: #fff; background-color: #796f68; padding: 10px;">捐款人資料</h5>
 
           <div class="form-group mb-3">
             <label class="form-label">姓名或單位名稱：</label>
@@ -157,7 +203,7 @@
             <textarea class="form-control" rows="3"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-block mt-3" style="font-size: 1.25rem; background-color: #A67B5B; border: none; color: #FFF;" onmouseover="this.style.backgroundColor='#E99922'" onmouseout="this.style.backgroundColor='#A67B5B'">送出</button>
+          <button type="submit" class="btn btn-block mt-3" style="font-size: 1.25rem; background-color: #beaa9a; border: none; color: #FFF;" onmouseover="this.style.backgroundColor='#E99922'" onmouseout="this.style.backgroundColor='#beaa9a'">送出</button>
         </form>
       </div>
     </div>
