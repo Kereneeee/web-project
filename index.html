@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+HK:wght@200..900&display=swap" rel="stylesheet">
+
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -142,16 +146,13 @@
         <div class="row">
           <div class="col-6 text-left">
             <ul class="social-media">
-              <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
-              <li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://www.facebook.com/Elders25333333/?locale=zh_TW" class="p-2"><span class="icon-facebook"></span></a></li>
             </ul>
           </div>
           <div class="col-6">
             <p class="mb-0 float-right">
-              <span class="mr-3"><a href="tel://#"> <span class="icon-phone mr-2"></span><span class="d-none d-lg-inline-block">+1 234 5678 9101</span></a></span>
-              <span><a href="#"><span class="icon-envelope mr-2"></span><span class="d-none d-lg-inline-block">info@yourdomain.com</span></a></span>
+              <span class="mr-3"><a class="phone-link" href="tel://#"> <span class="icon-phone mr-2"></span><span class="d-none d-lg-inline-block">(02)2533-3333</span></a></span>
+              <span><a class='phone-link' href="#"><span class="icon-envelope mr-2"></span><span class="d-none d-lg-inline-block">a19181717@yahoo.com.tw</span></a></span>
             </p>
             
           </div>
@@ -188,14 +189,16 @@
                 </li>
                 <li><a href="#services-section" class="nav-link">長者服務</a></li>
                 <li><a href="#contact-section" class="nav-link">聯絡我們</a></li>
-                <li class="dropdown">
-                  <a href="#Donate-section" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2 dropdown-toggle" style="color: white !important;" data-toggle="dropdown">捐款</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="donate.html">網路捐款</a>
-                    <a class="dropdown-item" href="forms.html">說明與表格</a>
-                    <a class="dropdown-item" href="mails.html">捐款徵信</a>
-                  </div>
-                </li>     
+                <li class="nav-item dropdown">
+                  <a href="#Donate-section" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2 dropdown-toggle" style="color: white !important;" id="donateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    捐款
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="donateDropdown">
+                    <li><a class="dropdown-item" href="donate.html">網路捐款</a></li>
+                    <li><a class="dropdown-item" href="forms.html">說明與表格</a></li>
+                    <li><a class="dropdown-item" href="mails.html">捐款徵信</a></li>
+                  </ul>
+                </li>
               </ul>
             </nav>
           </div>
@@ -210,14 +213,14 @@
 
   
      
-    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade">
+    <div class="site-blocks-cover overlay" style="background-image: url(images/主頁面.jpg);" data-aos="fade">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">             
             <div class="row mb-4">
               <div class="col-md-8">
-                <h1>用愛守護長者，讓每一天都更美好</h1>
-                <p class="mb-5">台北老人基金會致力於關懷長者，提供基本的照護與生活支持，<br>
+                <h1 class="title-about-1">用愛守護長者，讓每一天都更美好</h1>
+                <p class="mb-5" style="font-size: 20px;">台北市老人基金會致力於關懷長者，提供基本的照護與生活支持，<br>
                 讓每位長者都能安心度過晚年。</p>
               </div>
             </div>
@@ -244,8 +247,8 @@
           <p>&nbsp;</p>
           <h1 class="title-about-1"><b>您好，</b></h1>
           <h3 class="title-about-1"><b>我們是台北市老人基金會</b></h3>
-          <p class="context-about">我們致力於提供生活援助、安全守護與樂活機會，讓每位長者都能安心、健康、有尊嚴的生活。</p>
-          <p><a href="about.html" class="btn btn-primary btn-black--hover" style="background-color: rgb(240, 170, 41)">了解更多</a></p>
+          <p class="context-about">我們致力於提供生活援助、安全守護與樂活機會，<br>讓每位長者都能安心、健康、有尊嚴的生活。</p>
+          <p style="text-align: left;"><a href="about.html" class="btn btn-primary btn-black--hover" style="background-color: rgb(240, 170, 41) ">了解更多</a></p>
         </div>
       </div>
     </div>
@@ -262,7 +265,7 @@
               
               <!-- 中央標題 -->
               <br>
-              <h2 class="mx-4 mb-0 fw-bold" style="color: #E99922;">長者服務介紹</h2>
+              <h2 class="mx-4 mb-0 fw-bold title-about-1" style="color: #E99922;"><b>長者服務介紹</b></h2>
               
               <!-- 右線 -->
               <div style="height: 3px; background-color: #E99922; flex-grow: 1;"></div>
@@ -281,7 +284,7 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="images/person_2.jpg" alt="..." />
+                            <img class="img-fluid" src="images/長者助養.jpg" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">長者助養</div>
@@ -295,7 +298,7 @@
                               <div class="portfolio-hover">
                                   <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                               </div>
-                              <img class="img-fluid" src="images/person_3.jpg" alt="..." />
+                              <img class="img-fluid" src="images/長者防護.jpg" alt="..." />
                           </a>
                           <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">長者防護</div>
@@ -309,7 +312,7 @@
                               <div class="portfolio-hover">
                                   <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                               </div>
-                              <img class="img-fluid" src="images/person_4.jpg" alt="..." />
+                              <img class="img-fluid" src="images/長者協尋.jpg" alt="..." />
                           </a>
                           <div class="portfolio-caption">
                               <div class="portfolio-caption-heading">長者協尋</div>
@@ -647,7 +650,7 @@
             <div>
               <div class="testimonial">
                 <div class="content-wrapper">
-                  <h2 style="color: #E99922;">什麼是長期照顧？</h2>
+                  <h2 class="title-about-2" style="color: #E99922;"><b>什麼是長期照顧？</b></h2>
                   <p>長期照顧是為了協助失能或失智者維持日常生活能力，<br>涵蓋照顧服務、醫療支持與家庭照顧者支援。</p>
                 </div>
               </div>
@@ -656,7 +659,7 @@
             <div>
               <div class="testimonial">
                 <div class="content-wrapper">
-                  <h2 style="color: #E99922;">誰可以申請長照服務？</h2>
+                  <h2 class="title-about-2" style="color: #E99922;"><b>誰可以申請長照服務？</b></h2>
                   <p>凡設籍台灣，<br>年滿65歲以上失能長者、50歲以上失智症者、<br>或領有身心障礙證明者，皆可申請長照服務。</p>
                 </div>
               </div>
@@ -665,7 +668,7 @@
             <div>
               <div class="testimonial">
                 <div class="content-wrapper">
-                  <h2 style="color: #E99922;">長照2.0 有哪些服務？</h2>
+                  <h2 class="title-about-2" style="color: #E99922;"><b>長照2.0 有哪些服務？</b></h2>
                   <p>包括居家服務、交通接送、喘息服務、<br>輔具租借與家庭照顧者支持等，<br>全方位照顧長者生活所需。</p>
                 </div>
               </div>
@@ -674,7 +677,7 @@
             <div>
               <div class="testimonial">
                 <div class="content-wrapper">
-                  <h2 style="color: #E99922;">申請流程會很複雜嗎？</h2>
+                  <h2 class="title-about-2" style="color: #E99922;"><b>申請流程會很複雜嗎？</b></h2>
                   <p>不會，只需撥打1966長照專線，<br>由專人協助安排評估與後續服務。<br>也可洽地方政府的長照管理中心。</p>
                 </div>
               </div>
@@ -683,40 +686,24 @@
         </section>
         
 
-          <div>
-            <div class="testimonial">
-
-              <blockquote class="mb-5">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-              <figure class="mb-4 d-flex align-items-center justify-content-center">
-                <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                <p>Robert Spears</p>
-              </figure>
-
-              
-            </div>
-          </div>
-
-          <div>
-            <div class="testimonial">
-
-              <blockquote class="mb-5">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-              <figure class="mb-4 d-flex align-items-center justify-content-center">
-                <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
-                <p>Bruce Rogers</p>
-              </figure>
-
-            </div>
-          </div>
-
-        </div>
-    </section>
 <!--照片牆-->
 <section class="photo-wall">
-  <h2>紀錄照片</h2>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="d-flex align-items-center">
+          <!-- 左線 -->
+          <div style="height: 3px; background-color: #E99922; flex-grow: 1;"></div>
+          
+          <!-- 中央標題 -->
+          <br>
+          <h2 class="mx-4 mb-0 fw-bold title-about-1" style="color: #E99922;"><b>紀錄照片</b></h2>
+          
+          <!-- 右線 -->
+          <div style="height: 3px; background-color: #E99922; flex-grow: 1;"></div>
+        </div>
+      </div>
+    </div>
   <div class="gallery">
     <img src="images/photo1.jpg" alt="活動1">
     <img src="images/photo2.jpg" alt="活動2">
@@ -743,7 +730,7 @@
       <div class="row align-items-center">
         <!-- 左側：捐款標題與按鈕 -->
         <div class="col-md-6 mb-4 mb-md-0">
-          <h2 class="fw-bold mb-3" style="color: #E99922; font-size: 2.5rem;">幫助長者，一起點亮希望</h2>
+          <h2 class="fw-bold mb-3 title-about-2" style="color: #E99922; font-size: 2.5rem"><b>幫助長者，一起點亮希望</b></h2>
           <p class="lead mb-4" style="color: #555; font-size: 1.25rem;">
             您的每一份捐款，都是改變長者人生的力量。<br>讓我們一起攜手前行。
           </p>
@@ -850,10 +837,10 @@
               <p class="mb-4">104台北市中山區敬業一路128巷41號2樓之2</p>
 
               <p class="mb-0 font-weight-bold">電話</p>
-              <p class="mb-4" ><a href="#">(02)2533-3333</a></p>
+              <p class="mb-4" ><a class="phone-link" href="#">(02)2533-3333</a></p>
 
               <p class="mb-0 font-weight-bold">傳真</p>
-              <p class="mb-0" ><a href="#">(02)2533-9999</a></p>
+              <p class="mb-0" ><a class="phone-link" href="#">(02)2533-9999</a></p>
               <br>
               <iframe 
                 src="https://maps.google.com/maps?q=25.082943,121.553182&hl=zh-TW&z=18&output=embed" 
@@ -975,4 +962,7 @@
       setTimeout(handleScrollToSection, 100); // 延遲 100ms 確保 DOM 穩定
     });
   </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>

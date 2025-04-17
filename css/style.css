@@ -5,6 +5,29 @@ body {
   font-weight: 400;
   font-size: 1rem; }
 
+.title-about-1 {
+  font-family: "Noto Serif HK", serif !important;
+}  
+.title-about-2 {
+    font-family: "Noto Serif HK", serif !important;
+    text-align: center;
+}
+.btn-danger {
+    font-family: "Noto Sans TC", sans-serif !important;
+}
+
+.icon-facebook,
+.icon-phone,
+.icon-envelope {
+    color: #E99922;
+}
+
+.phone-link,
+.phone-link span {
+    color: #E99922;
+    text-decoration: none;
+}
+
 header {
   border-bottom: 4px solid #E99922; /* 底部加一條 4px 的橘色線 */
 }
@@ -1675,7 +1698,7 @@ h1, h2, h3, h4, h5,
     .popular-category:hover .icon {
       color: #fff; }
     .popular-category:hover .number {
-      background: #30d9a7;
+      background: #e99922;
       color: #fff; }
 
 @media (max-width: 1199.98px) {
