@@ -19,85 +19,131 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-.section-title {
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #dc3545;
-}
-.section-content {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #333;
-}
-.custom-section {
-  padding: 80px 0;
-}
-.custom-section.bg-light {
-  background-color: #f9f9f9;
+  .section-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #dc3545;
   }
-<!--基金會分組的設定-->
-.c_1 {
-  background-color: #fff8f0;
+  .section-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+  }
+  .custom-section {
+    padding: 80px 0;
+  }
+  .custom-section.bg-light {
+    background-color: #f9f9f9;
+    }
+  /*基金會分組的設定*/
+  .c_1 {
+    background-color: #fff8f0;
+  }
+  .c_2 {
+    background-color: #fff1e6;
+  }
+  .c_3 {
+    background-color: #fff4e0;
+  }
+  .c_4 {
+    background-color: #ffeee0;
+  }
+  .c_5 {
+    background-color: #fff0e0;
+  }
+  /*基金會年表的設定*/
+  .timeline-scrollbox {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 0 10px 0 40px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  border-left: 3px solid #f39c12;
+  scroll-behavior: smooth;
 }
-.c_2 {
-  background-color: #fff1e6;
+
+/* 自訂捲軸 */
+.timeline-scrollbox::-webkit-scrollbar {
+  width: 8px;
 }
-.c_3 {
-  background-color: #fff4e0;
+.timeline-scrollbox::-webkit-scrollbar-thumb {
+  background-color: #f39c12;
+  border-radius: 10px;
 }
-.c_4 {
-  background-color: #ffeee0;
+.timeline-scrollbox::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
 }
-.c_5 {
-  background-color: #fff0e0;
-}
-<!--基金會年表的設定-->
+
 .timeline {
   position: relative;
+  z-index: 1;
   margin-left: 30px;
   padding-left: 20px;
-  border-left: 3px solid #f39c12;
 }
 
 .timeline-item {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
+  padding-left: 30px;
 }
-
 .timeline-item::before {
-  content: "";
+  content: '';
   position: absolute;
-  left: -12px;
-  top: 4px;
+  left: -10px;
+  top: 5px;
   width: 12px;
   height: 12px;
   background-color: #f39c12;
   border-radius: 50%;
-  border: 2px solid white;
+  z-index: 2;
 }
 
 .timeline-date {
   font-weight: bold;
-  color: #d35400;
+  color: #f39c12;
   margin-bottom: 5px;
 }
 
 .timeline-content {
   font-size: 1rem;
   color: #333;
+  line-height: 1.6;
 }
-<!--記事的滾動設定-->
-.scroll-container {
-  max-height: 200px; /* 高度你可以依畫面自行調整 */
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding-right: 10px; /* 留點空間給滾動條，不然會擠到文字 */
-  background: rgba(255, 255, 255, 0.8); /* 可選：加個背景讓它更清楚 */
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  display: block;
-}
+  /*尾頁設定*/
+  .footer {
+    background-color: #5c3d1d; /* 橘色 */
+    color: white;
+    padding: 40px 0;  
+    font-family: sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
 </style>
 </head>
 
@@ -241,7 +287,7 @@ data-aos="fade">
     <h2 class="section-title text-center mb-5">基金會記事</h2>
 
     <!-- 時間軸內容區 -->
-    <div class="scroll-container">
+    <div class="timeline-scrollbox">
       <div class="timeline">
         <div class="timeline-item" data-aos="fade-up">
           <div class="timeline-date">76.07</div>
@@ -275,109 +321,33 @@ data-aos="fade">
           <div class="timeline-date">80.12</div>
           <div class="timeline-content">製作金色年華、重陽節等老人福利電視節目。</div>
         </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">81.04</div>
-          <div class="timeline-content">推動獨居老人居家保全『生命連線』系統。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">81.12</div>
-          <div class="timeline-content">設置防護組，協助受虐老人。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">82.10</div>
-          <div class="timeline-content">與中視聯合制作『養兒防老』節目報導獨居、失養之孤苦老人，使社會大眾正視獨居老人問題。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">83.03</div>
-          <div class="timeline-content">『生命關懷愛心連線』召集北區無線電計程車聯誼會七仟輛車，成立獨居老人緊急救援系統。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">83.07</div>
-          <div class="timeline-content">『老人保護委員會』由基金會邀集五十八位立委共同出席，達成老人福利相關法案之推動。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">84.02</div>
-          <div class="timeline-content">協助14、15號公園拆遷戶老人尋找安置新家。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">84.06</div>
-          <div class="timeline-content">與中央員警大學合辦『和諧專案』，配合全省一萬五仟位勤區員警，主動提報疑似受虐老人個案。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">85.06</div>
-          <div class="timeline-content">推動修正老人福利法，確立老人為65歲以上，並增加老人保護專章。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">85.06</div>
-          <div class="timeline-content">完成國內首冊老人保護計畫書。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">86.01</div>
-          <div class="timeline-content">成立桃園、新竹、苗栗、台中、南投、嘉義、台南、高雄八處老人防護聯絡處。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">86.07</div>
-          <div class="timeline-content">設置『老人中途之家』24小時緊急安置迷途、受虐老人。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">87.01</div>
-          <div class="timeline-content">『希望之燈』寒冬送暖系列活動，發掘千餘位需協助個案。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">87.12</div>
-          <div class="timeline-content">設置協尋組，協助迷途老人。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">88.01</div>
-          <div class="timeline-content">與中視、聯合報、警廣製作『他在哪里?』迷途老人協尋專案，協助800位老人返家團圓。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">88.06</div>
-          <div class="timeline-content">	與東森s台聯合制作『老有所養』單元，報導獨居老人個案協尋迷途老人。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">88.07</div>
-          <div class="timeline-content">一九九九年國際關懷年『我愛老人公益宣誓』十二位新聞主播以愛心手印，發起關懷獨居老人活動。</div>
-        </div>
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">88.09</div>
-          <div class="timeline-content">『921震災黃菊花重生計畫』921地震後基金會緊急安置失能老人274位，關懷協助災區低收入戶及失依老人逾2000件個案，至今仍持續輔導中。</div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">88.11</div>
-          <div class="timeline-content">與廣青合唱團共同舉辦『守護黃菊花音樂會』，以紀念921死難老人。</div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">89.01</div>
-          <div class="timeline-content">『寒冬送暖』於臺北市內湖區團管司令部，宴請一仟余名獨居老人春節圍爐並致贈紀念品及紅包。</div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">89.03</div>
-          <div class="timeline-content">由本會及義工結合扶青團組成獨居老人在宅服務。</div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">89.05</div>
-          <div class="timeline-content">『母親節愛心連線敬老活動』，致贈送500具聲控手機予貧苦獨居老人，使老人在危難時候能獲得及時幫助。</div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">89.06</div>
-          <div class="timeline-content">與臺北縣警察局合作協尋老人資料比對及資源整合會議，期待協助更多迷途老人歸家。</div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-up">
-          <div class="timeline-date">89.07</div>
-          <div class="timeline-content">設立921災區中寮鄉、仁愛鄉重建委員會。</div>
-        </div>
 
       </div>
     </div>
   </div>
 </section>
+    <!--尾頁-->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="images/title.png" alt="基金會LOGO" style="width: 300px;">
+          <p>台北市老人基金會<br>版權所有©</p>
+        </div>
+        <div class="footer-middle">
+          <p><strong>聯絡資訊</strong></p>
+          <p>地址：104台北市中山區敬業一路128巷41號2樓之2</p>
+          <p>電話：(02)2533-3333</p>
+          <p>傳真：(02)2533-9999</p>
+          <p>郵政劃撥:19181717</p>
+        </div>
+        <div class="footer-right">
+          <p><strong>快速連結</strong></p>
+          <a href="#about-section">關於我們</a><br>
+          <a href="#Donate-section">捐款專區</a><br>
+          <a href="#services-section">長者服務</a>
+        </div>
+      </div>
+    </footer>
 
 <!-- 屬名 -->
 <footer>
