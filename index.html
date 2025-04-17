@@ -33,6 +33,95 @@
       .context-about {
         text-align: left;
       }
+/*照片牆*/
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .photo-wall {
+      padding: 30px;
+      text-align: center;
+      background-color: #f8f8f8;
+    }
+
+    .photo-wall h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #f39c12;  /* 溫暖橘黃，公益感 */
+    }
+
+    /* 照片牆排版 */
+    /* 基金會配色風格 */
+      .photo-wall {
+        padding: 30px;
+        text-align: center;
+        background-color: #f8f8f8;
+      }
+
+      .photo-wall h2 {
+        font-size: 35px;
+        margin-bottom: 30px;
+        color: #f39c12;
+      }
+
+      /* 照片牆排版 */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        justify-items: center;
+      }
+
+      /* 去除動畫，保留hover效果 */
+      .gallery img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 16px rgba(39, 174, 96, 0.3);
+      }
+      /*尾頁設定*/
+      .footer {
+        background-color: #5c3d1d; 
+        color: white;
+        padding: 40px 0;
+        font-family: sans-serif;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .footer-left,
+      .footer-middle,
+      .footer-right {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -94,13 +183,13 @@
                   <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                     <li><a class="dropdown-item" href="about.html#intro-section">基金會簡介</a></li>
                     <li><a class="dropdown-item" href="about.html#groups-section">基金會分組</a></li>
-                    <li><a class="dropdown-item" href="#events-section">基金會記事</a></li>
+                    <li><a class="dropdown-item" href="about.html#events-section">基金會記事</a></li>
                   </ul>
                 </li>
                 <li><a href="#services-section" class="nav-link">長者服務</a></li>
                 <li><a href="#contact-section" class="nav-link">聯絡我們</a></li>
                 <li class="dropdown">
-                  <a href="#" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2 dropdown-toggle" style="color: white !important;" data-toggle="dropdown">捐款</a>
+                  <a href="#Donate-section" class="nav-link btn btn-danger btn-lg px-5 py-3 fw-bold fs-2 dropdown-toggle" style="color: white !important;" data-toggle="dropdown">捐款</a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="donate.html">網路捐款</a>
                     <a class="dropdown-item" href="forms.html">說明與表格</a>
@@ -124,49 +213,46 @@
     <div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-
-          <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
-                        
+          <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">             
             <div class="row mb-4">
               <div class="col-md-8">
                 <h1>用愛守護長者，讓每一天都更美好</h1>
                 <p class="mb-5">台北老人基金會致力於關懷長者，提供基本的照護與生活支持，<br>
                 讓每位長者都能安心度過晚年。</p>
-                <!--<div>
-                  <a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a>
-                </div>-->
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>  
-<!--介紹-->
-<div class="site-section" id="about-section">
-  <div class="container">
-    <div class="row align-items-lg-center">
-      <div class="col-md-6 mb-5 mb-lg-0 position-relative">
-        <br>
-        <br>
-        <br>
-        <br>
-        <img src="images/anout-1.jpg" class="img-fluid" alt="Image">
-        <div class="experience">
+  <!--介紹-->
+  <div class="site-section" id="about-section">
+    <div class="container">
+      <div class="row align-items-lg-center">
+        <div class="col-md-6 mb-5 mb-lg-0 position-relative">
+          <br>
+          <br>
+          <br>
+          <br>
+          <img src="images/anout-1.jpg" class="img-fluid" alt="Image">
+          <div class="experience">
+          </div>
         </div>
-      </div>
-      <div class="col-md-5 ml-auto">
-        <h1 class="title-about-1"><b>您好，</b></h1>
-        <h3 class="title-about-1"><b>我們是台北老人基金會</b></h3>
-        <p class="context-about">我們致力於提供生活援助、安全守護與樂活機會，讓每位長者都能安心、健康、有尊嚴的生活。</p>
-        <p><a href="子頁面1.html" class="btn btn-primary btn-black--hover" style="background-color: rgb(240, 170, 41)">了解更多</a></p>
+        <div class="col-md-5 ml-auto">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1 class="title-about-1"><b>您好，</b></h1>
+          <h3 class="title-about-1"><b>我們是台北市老人基金會</b></h3>
+          <p class="context-about">我們致力於提供生活援助、安全守護與樂活機會，讓每位長者都能安心、健康、有尊嚴的生活。</p>
+          <p><a href="about.html" class="btn btn-primary btn-black--hover" style="background-color: rgb(240, 170, 41)">了解更多</a></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 <!--長者服務介紹-->
     <section class="site-section" id="services-section">
-      <div style="height: 100px;"></div>
       <div class="container">
         <div class="row mb-5">
           <div class="col-12">
@@ -183,10 +269,6 @@
             </div>
           </div>
         </div>
-        
-        
-        
-        
 
         <!--長者服務圖片點擊區-->
         <section class="page-section bg-light" id="portfolio">
@@ -601,8 +683,63 @@
         </section>
         
 
+          <div>
+            <div class="testimonial">
+
+              <blockquote class="mb-5">
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+              </blockquote>
+              <figure class="mb-4 d-flex align-items-center justify-content-center">
+                <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
+                <p>Robert Spears</p>
+              </figure>
+
+              
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial">
+
+              <blockquote class="mb-5">
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+              </blockquote>
+              <figure class="mb-4 d-flex align-items-center justify-content-center">
+                <div><img src="images/person_4.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
+                <p>Bruce Rogers</p>
+              </figure>
+
+            </div>
+          </div>
+
+        </div>
+    </section>
+<!--照片牆-->
+<section class="photo-wall">
+  <h2>紀錄照片</h2>
+  <div class="gallery">
+    <img src="images/photo1.jpg" alt="活動1">
+    <img src="images/photo2.jpg" alt="活動2">
+    <img src="images/photo3.jpg" alt="活動3">
+    <img src="images/photo4.jpg" alt="活動4">
+    <img src="images/photo5.jpg" alt="活動5">
+    <img src="images/photo6.jpg" alt="活動6">
+    <img src="images/photo7.jpg" alt="活動7">
+    <img src="images/photo8.jpg" alt="活動8">
+    <img src="images/photo9.jpg" alt="活動9">
+    <img src="images/photo10.jpg" alt="活動10">
+    <img src="images/photo11.jpg" alt="活動11">
+    <img src="images/photo12.jpg" alt="活動12">
+    <img src="images/photo13.jpg" alt="活動13">
+    <img src="images/photo14.jpg" alt="活動14">
+    <img src="images/photo15.jpg" alt="活動15">
+    <img src="images/photo16.jpg" alt="活動16">
+  </div>
+</section>
+
+<!--捐款頁面-->
     <section class="container my-5 py-5"  id="Donate-section">
-      <div style="height: 100px;"></div>
+      <div style="height: 60px;"></div>
       <div class="row align-items-center">
         <!-- 左側：捐款標題與按鈕 -->
         <div class="col-md-6 mb-4 mb-md-0">
@@ -655,17 +792,6 @@
         </div>
         </div>
       </div>
-    </section>
-    
-  
-    
-    
-
-
-          
-        </div>
-      </div>
-    </section>
 
    
 
@@ -680,26 +806,19 @@
         </div>
         <div class="row">
           <div class="col-md-7 mb-1 h-100">
-
-            
-
             <form action="#" class="p-4 bg-white h-100" style="font-size: 14px; line-height: 1.5;">
-
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="text-black" for="email">姓名</label> 
                   <input type="email" id="email" class="form-control">
                 </div>
               </div>
-
-              <div class="row form-group">
-                
+              <div class="row form-group"> 
                 <div class="col-md-12">
                   <label class="text-black" for="email">Email</label> 
                   <input type="email" id="email" class="form-control">
                 </div>
               </div>
-
               <div class="row form-group">
                 
                 <div class="col-md-12">
@@ -752,65 +871,32 @@
       </div>
     </section>
     <div style="height: 100px;"></div>
-    
+  </div> <!-- .site-wrap --> 
     
 
     <!--尾頁-->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <div class="row">
-              <div class="col-md-5">
-                <h2 class="footer-heading mb-4" style="color: aliceblue;">台北市老人基金會</h2>
-                <p>我們致力於提供生活援助、安全守護與樂活機會，讓每位長者都能安心、健康、有尊嚴的生活。</p>
-              </div>
-              <div class="col-md-3 ml-auto">
-                <h2 class="footer-heading mb-4">超連結</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#about-section">關於我們</a></li>
-                  <li><a href="#services-section">長者服務</a></li>
-                  <li><a href="#contact-section">聯絡我們</a></li>
-                  <li><a href="#Donate-section">捐款資訊</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3">
-                <h2 class="footer-heading mb-4">捐款資訊</h2>
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post" class="footer-subscribe">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
-          </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="images/title.png" alt="基金會LOGO" style="width: 300px;">
+          <p>台北市老人基金會<br>版權所有©</p>
         </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-            <p>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
-            </div>
-          </div>
-          
+        <div class="footer-middle">
+          <p><strong>聯絡資訊</strong></p>
+          <p>地址：104台北市中山區敬業一路128巷41號2樓之2</p>
+          <p>電話：(02)2533-3333</p>
+          <p>傳真：(02)2533-9999</p>
+          <p>郵政劃撥:19181717</p>
+        </div>
+        <div class="footer-right">
+          <p><strong>快速連結</strong></p>
+          <a href="#about-section">關於我們</a><br>
+          <a href="#Donate-section">捐款專區</a><br>
+          <a href="#services-section">長者服務</a>
         </div>
       </div>
     </footer>
 
-  </div> <!-- .site-wrap -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -825,8 +911,6 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
-
-  
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
